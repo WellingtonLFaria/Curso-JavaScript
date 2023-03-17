@@ -1,5 +1,6 @@
 * {
     margin: 5px;
+    border-radius: 5px;
 }
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -14,4 +15,8 @@ h1 {
 p {
     color: black;
     background-color: rgb(170, 170, 255);
+}
+div {
+    color: black;
+    background-color: rgb(100, 100, 190);
 }

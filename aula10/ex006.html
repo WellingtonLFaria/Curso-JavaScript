@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula10/ex006.html Eventos DOM</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        /*
+        Event Reference: https://developer.mozilla.org/en-US/docs/Web/Events
+        */
+
+        // Guardando a div#area em uma variável.
+        var area = window.document.querySelector('div#area')
+
+        // Se o usuário clicar na div#area
+        function clicar() {
+            if (area.innerHTML == "Clicou!") {
+                area.innerHTML = 'Interaja...'
+            } else {
+                area.innerHTML = 'Clicou!'
+            }
+        }
+
+        // Se o usuário entrar com o mouse na div#area
+        function entrar() {
+            area.style.background = 'red'
+        }
+
+        // Se o usuário sair com o mouse na div#area
+        function sair() {
+            area.style.background = 'rgb(100, 100, 190)'
+        }
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+    </script>
+</body>
+</html>
