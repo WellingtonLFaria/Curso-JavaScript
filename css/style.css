@@ -1,0 +1,17 @@
+* {
+    margin: 5px;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgb(120, 120, 255);
+    color: white;
+}
+h1 {
+    color: black;
+    background-color: rgb(140, 140, 255);
+}
+p {
+    color: black;
+    background-color: rgb(170, 170, 255);
+}

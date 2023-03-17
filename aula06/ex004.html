@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula06/ex004.html</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual é seu nome?")
+        document.write(`Olá ${nome};<br>`)
+        document.write(`Seu nome tem ${nome.length} letras;<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()};<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br><br>`)
+
+        nome.length // Quantos caracteres a string tem.
+        nome.toUpperCase() // tudo para maíusculas
+        nome.toLowerCase() // tudo para minúsculas
+
+        var numero = Number.parseFloat(window.prompt("Informe um valor:"))
+        document.write(`O número ${numero} em duas casa decimais é ${numero.toFixed(2)};<br> E substituindo os . por , é ${numero.toFixed(2).replace('.', ',')};<br>E transformado para BRL é ${numero.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}.`)
+
+        var n1 = 1543.5 // Declarando a variável
+        n1.toFixed(2) // Para duas casas decimais
+        n1.toFixed(2).replace('.', ',') // Para duas casas decimais, substituindo os . por ,
+        n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) // Transforma o valor em BRL(R$)
+        n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'}) // Transforma o valor em USD(US$)
+        n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'}) // Transforma o valor em EUR(€)
+    </script>
+</body>
+</html>
