@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="vel">Velocidade do carro:</label>
+    <input type="number" placeholder="Km/h" name="vel" id="vel">
+    <button onclick="verificarvelocidade()">Verificar</button>
+    <p id="status"></p>
+    <script>
+        function verificarvelocidade() {
+            var vel = Number(document.querySelector('input#vel').value)
+            var status = document.querySelector('p#status')
+            if (vel > 60) {
+                status.innerHTML = `Você foi multado! | Velocidade permitida: 60Km/h | Sua velocidade: ${vel}`
+            } else {
+                status.innerHTML = 'Você está dentro do limite de velocidade permitido! | Velocidade permitida: 60Km/h'
+            }
+        }
+    </script>
+</body>
+</html>
